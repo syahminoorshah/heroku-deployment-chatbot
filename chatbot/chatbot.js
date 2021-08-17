@@ -19,8 +19,10 @@ const sessionPath = sessionClient.sessionPath(config.googleProjectID, config.dia
 
 
 module.exports = {
-    textQuery: async function(text, parameters= {}) {
+    //textQuery: async function(text, parameters= {}) {
+        textQuery: async function(text, userID, parameters = {}) {
         let self = module.exports;
+        //const sessionPath = sessionClient.sessionPath(projectId, sessionId + userID);
         const request = {
             session: sessionPath,
             queryInput: {
@@ -37,12 +39,15 @@ module.exports = {
         };
 
         let responses = await sessionClient.detectIntent(request);
-            responses = await self.handleAction(responses);
-        return responses;
+            //responses = await self.handleAction(responses);
+            responses = self.handleAction(responses);        
+            return responses;
     },
     
-    eventQuery: async function(event, parameters= {}) {
+    //eventQuery: async function(event, parameters= {}) {
+        eventQuery: async function(event, userID,  parameters = {}) {
         let self = module.exports;
+        //let sessionPath = sessionClient.sessionPath(projectId, sessionId + userID);
         const request = {
             session: sessionPath,
             queryInput: {
