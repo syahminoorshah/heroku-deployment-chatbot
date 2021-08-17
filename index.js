@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const config = require('./config/keys');
-const mongoose = require('mongoose');
-mongoose.connect(config.mongoURI, { useNewUrlParser: true});
+// const mongoose = require('mongoose');
+// mongoose.connect(config.mongoURI, { useNewUrlParser: true});
 
 app.use(bodyParser.json());
 
