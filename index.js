@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 require('./models/Registration');
 require('./routes/dialogFlowRoutes')(app);
+require('./routes/fulfillmentRoutes')(app);
 
 //app.listen(5000);
 // app.listen(process.env.PORT || 5000);
