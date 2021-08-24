@@ -8,7 +8,7 @@ import { v4 as uuid } from 'uuid';
 import Message from './Message';
 import Card from './Card';
 import QuickReplies from './QuickReplies';
-
+//test
 const cookies = new Cookies();
 
 class Chatbot extends Component {
