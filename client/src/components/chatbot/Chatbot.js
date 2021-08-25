@@ -85,18 +85,18 @@ class Chatbot extends Component {
         
         
 
-        if (window.location.pathname === '/shop' && !this.state.shopWelcomeSent) {
-            await this.resolveAfterXSeconds(1);
-            this.df_event_query('WELCOME_SHOP');
-            this.setState({ shopWelcomeSent: true, showBot: true });
-        }
+        // if (window.location.pathname === '/shop' && !this.state.shopWelcomeSent) {
+        //     await this.resolveAfterXSeconds(1);
+        //     this.df_event_query('WELCOME_SHOP');
+        //     this.setState({ shopWelcomeSent: true, showBot: true });
+        // }
 
-        this.props.history.listen(() => {
-            if (this.props.history.location.pathname === '/shop' && !this.state.shopWelcomeSent) {
-                this.df_event_query('WELCOME_SHOP');
-                this.setState({ shopWelcomeSent: true, showBot: true });
-            }
-        });
+        // this.props.history.listen(() => {
+        //     if (this.props.history.location.pathname === '/shop' && !this.state.shopWelcomeSent) {
+        //         this.df_event_query('WELCOME_SHOP');
+        //         this.setState({ shopWelcomeSent: true, showBot: true });
+        //     }
+        // });
     }
 
     componentDidUpdate() {
@@ -184,7 +184,7 @@ class Chatbot extends Component {
         }
     }
 
-
+    
 
     //Press Enter to send message to chatbot from user
     _handleInputKeyPress(e) {
@@ -213,7 +213,7 @@ class Chatbot extends Component {
                     <div id="chatbot"  style={{ minHeight: 288, maxHeight: 388, width:'100%', overflow: 'auto'}}>
 
                         {this.renderMessages(this.state.messages)}
-                        
+                       
                         <div ref={(el) => { this.messagesEnd = el; }}
                              style={{ float:"right"}}>
                                  {/* , clear: "both"  */}
@@ -223,8 +223,7 @@ class Chatbot extends Component {
 
                     <div className = "col s100">
                     
-                        <a class="waves-effect waves-light btn" onClick={this._handleButtonIntro}>Track Order</a> 
-                            {/* <li><a href="/shop" onClick={this._handleButtonIntro}>Order</a></li> */}
+                        <a class="waves-effect waves-light btn">Track Order</a> 
                         <a class="waves-effect waves-light btn">Quote Delivery</a>
                         <a class="waves-effect waves-light btn">J&T Location Near Me</a>
                         
@@ -234,6 +233,8 @@ class Chatbot extends Component {
 
                     {/* Chatbot User Response */}
                     <div className=" col s12" >
+                        
+
                         <input style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
                     </div>
 

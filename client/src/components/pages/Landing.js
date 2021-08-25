@@ -21,13 +21,15 @@ class Landing extends React.Component {
         fontFamily: "Arial"  
       };  
       return (  
-        <div>  
-            <div style={{ textAlign: 'center'}}>
-                <h1 style={landingPage}>J&T Express</h1>
-                </div>
-                {/* <img src="https://wallpaperaccess.com/full/767033.jpg" alt="testing" width="500" height="300"></img> */}
-        <p>Chatbot Testing Development</p>  
-        </div>  
+        // <div>  
+        //     <div style={{ textAlign: 'center'}}>
+              
+        //         <div style={landingPage}>J&T Express</div>
+        //         </div>
+                
+        <p>#1 Parcel Delivery Service in Malaysia | J&T Express Malaysia </p>  
+        
+        //</div>  
       );  
     }  
   }  

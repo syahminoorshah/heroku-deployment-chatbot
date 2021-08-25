@@ -1,8 +1,15 @@
 import React from 'react';
 
+// const landingPage = {  
+//     color: "Black",  
+//     backgroundColor: "lightyellow",  
+//     padding: "20px",  
+//     fontFamily: "Arial"  
+//   };  
+
 const Message = (props) => {
     return (
-
+        
         <div className="col s12 m8 offset-m2 l6 offset-l3">
             <div className="card-panel grey lighten-5 z-depth-1">
                 <div className="row valign-wrapper">
@@ -24,6 +31,7 @@ const Message = (props) => {
                 </div>
             </div>
         </div>
+        
 
     );
 };

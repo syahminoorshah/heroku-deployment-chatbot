@@ -5,6 +5,8 @@ body {
     color: rgb(51, 48, 48);
     padding: 20px;
     font-family: Arial;
+    background-image: url(https://apicms.thestar.com.my/uploads/images/2019/11/10/376950.jpg);
+    background-size: 1600px 800px;
     /* text-align: center; */
   }
 
@@ -15,3 +17,5 @@ body {
     font-family: Arial;
     /* text-align: center; */
   }
+
+  

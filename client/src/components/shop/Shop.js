@@ -4,7 +4,7 @@ import FoodList from './FoodList';
 const Shop = () => 
     (
         <div>
-            <h2>Food List</h2> 
+            <h4>Shipping</h4> 
             <FoodList/>
         </div>
     )

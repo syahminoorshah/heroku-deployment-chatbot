@@ -24,7 +24,7 @@ class FoodList extends React.Component {
     };  
     return (  
       <div>  
-      <h1 style={descFoodList}>Craving for something?</h1>  
+      <h6 style={descFoodList}>Craving for something?</h6>  
       <p>These all our the varieties of our list of food that we have.</p>  
       </div>  
     );  
