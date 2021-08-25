@@ -23,10 +23,10 @@ class Landing extends React.Component {
       return (  
         <div>  
             <div style={{ textAlign: 'center'}}>
-                <h1 style={landingPage}>Welcome to foody website!</h1>
+                <h1 style={landingPage}>J&T Express</h1>
                 </div>
-                <img src="https://wallpaperaccess.com/full/767033.jpg" alt="testing" width="500" height="300"></img>
-        <p>Feel free to browse over all of our list of foods with the help of our chatbot</p>  
+                {/* <img src="https://wallpaperaccess.com/full/767033.jpg" alt="testing" width="500" height="300"></img> */}
+        <p>Chatbot Testing Development</p>  
         </div>  
       );  
     }  

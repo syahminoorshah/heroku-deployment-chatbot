@@ -22,7 +22,8 @@
     "dialogflow": "^1.2.0",
     "dialogflow-fulfillment": "^0.6.1",
     "express": "^4.17.1",
-    "mongoose": "^5.13.7"
+    "mongoose": "^5.13.7",
+    "natural": "^5.0.5"
   },
   "devDependencies": {
     "concurrently": "^6.2.1",
