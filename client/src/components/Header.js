@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 
 
 const Header = () => (
-  <nav>
+  
+  <nav style ={{ height: 100}}class="card-panel teal lighten-2">
       <div className="nav-wrapper">
-          <Link to={'/'} className="brand-logo">J&T Express</Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li><Link to={'/shop'}>Shipping</Link></li>
-              <li><Link to={'/about'}>Services</Link></li>
+          <Link to={'/'}  className="brand-logo">J&T Express</Link>
+          <ul id="nav-mobile"  className="right hide-on-med-and-down" >
+              <li ><Link to={'/shop'}>Shipping</Link></li>
+              <li ><Link to={'/about'}>Services</Link></li>
           </ul>
       </div>
   </nav>
+  
 )
 
 export default Header;

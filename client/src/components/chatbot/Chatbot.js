@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios/index";
 import { withRouter } from 'react-router-dom';
+import { createChatBotMessage} from "react-chatbot-kit";
 
 import Cookies from 'universal-cookie';
 import { v4 as uuid } from 'uuid';
@@ -8,8 +9,11 @@ import { v4 as uuid } from 'uuid';
 import Message from './Message';
 import Card from './Card';
 import QuickReplies from './QuickReplies';
+import Options from '../Options/Options';
+
 
 const cookies = new Cookies();
+
 
 class Chatbot extends Component {
     messagesEnd;
@@ -20,7 +24,8 @@ class Chatbot extends Component {
         // This binding is necessary to make `this` work in the callback
         this._handleInputKeyPress = this._handleInputKeyPress.bind(this);
         this._handleQuickReplyPayload = this._handleQuickReplyPayload.bind(this);
-        //this._handleButtonIntro = this._handleButtonIntro.bind(this);
+        //this._handleClick = this._handleClick.bind(this);
+        // this._handleButtonQuick = this._handleButtonQuick.bind(this);
         this.hide = this.hide.bind(this);
         this.show = this.show.bind(this);
 
@@ -135,9 +140,25 @@ class Chatbot extends Component {
         }
     }
 
+    // _handleButtonQuick(payload) {
+    //     // event.preventDefault();
+    //     // event.stopPropagation();
+
+    //     switch (payload) {
+    //         case 'track-number':
+    //         this.df_event_query('TRACK');
+    //         break;
+    //     default:
+    //         this.df_text_query();
+    //         break;
+    //     }
+    // }
+
+
     renderCards(cards) {
         return cards.map((card, i) => <Card key={i} payload={card.structValue}/>);
     }
+
 
     renderOneMessage(message, i) {
 
@@ -176,7 +197,8 @@ class Chatbot extends Component {
     renderMessages(returnedMessages) {
         if (returnedMessages) {
             return returnedMessages.map((message, i) => {
-                    return this.renderOneMessage(message, i);
+                return this.renderOneMessage(message, i);
+                //return this.renderTwoMessage(message, i);
                 }
             )
         } else {
@@ -184,7 +206,6 @@ class Chatbot extends Component {
         }
     }
 
-    
 
     //Press Enter to send message to chatbot from user
     _handleInputKeyPress(e) {
@@ -194,25 +215,73 @@ class Chatbot extends Component {
         }
     }
 
+
+    
+    
     render() {
         //Chatbot Outer Layout
         if (this.state.showBot) {
             return (
-                <div style={{ minHeight: 100, maxHeight: 500, width:380, position: 'absolute', bottom: 0, right: 0, border: '3px solid lightgray'}}>
-                    <nav>
-                        <div className="nav-wrapper">
-                            <a href="/" className="brand-logo">J&T Bot</a>
-                            <ul id="nav-mobile" className="right hide-on-med-and-down">
+                
+                <div class ='red lighten-5' style={{ minHeight: 100, maxHeight: 500, width:380, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}>
+                    <nav class="blue accent-1">
+                        <div className="nav-wrapper" style ={{ textAlign: 'left', fontSize: '1px' }} class="blue accent-1">
+                            <a href="/"  className="brand-logo"> <p6 style = {{fontSize:'20px'}}  >J&T Bot</p6> </a>
+                               
+                            <ul  id="nav-mobile" className="right hide-on-med-and-down">
                                 <li><a href="/" onClick={this.hide}>Close</a></li>
                             </ul>
                         </div>
                     </nav>
 
+
+
         {/* //Chatbot Inner Layout */}
 
-                    <div id="chatbot"  style={{ minHeight: 288, maxHeight: 388, width:'100%', overflow: 'auto'}}>
-
-                        {this.renderMessages(this.state.messages)}
+                    <div id="chatbot"  style={{ minHeight: 300, maxHeight: 388, width:'100%', overflow: 'auto'}}>
+                    {/* <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate"></input>
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate"></input>
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate"></input>
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate"></input>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate"></input>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email_inline" type="email" class="validate"></input>
+            <label for="email_inline">Email</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> */}
+                         {this.renderMessages(this.state.messages)} 
                        
                         <div ref={(el) => { this.messagesEnd = el; }}
                              style={{ float:"right"}}>
@@ -221,21 +290,18 @@ class Chatbot extends Component {
                     </div>
                     
 
-                    <div className = "col s100">
+                    {/* <div className = "buttonMultiple">
+                       
+                        <a href = "/" class="waves-effect waves-light btn"><input type="button" value="Track My Number" ></input></a>
+                        <a href ="/" class="waves-effect waves-light btn"><input type="button" value="Quote Delivery"></input></a>
+                        <a href ="/" class="waves-effect waves-light btn"><input type="button" value="J&T Location Near Me"></input></a>
                     
-                        <a class="waves-effect waves-light btn">Track Order</a> 
-                        <a class="waves-effect waves-light btn">Quote Delivery</a>
-                        <a class="waves-effect waves-light btn">J&T Location Near Me</a>
-                        
-
-                        
-                    </div>
+                    </div> */}
 
                     {/* Chatbot User Response */}
-                    <div className=" col s12" >
+                    <div className=" col s12" style={{}} class="blue accent-1" class='black-text' >
                         
-
-                        <input style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
+                        <input class='black-text' style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
                     </div>
 
                 </div>
@@ -243,11 +309,11 @@ class Chatbot extends Component {
         } else {
             return (
                 // Hide Chatbot
-                <div style={{ minHeight: 40, maxHeight: 500, width:400, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}>
-                    <nav>
+                <div style={{ minHeight: 20, maxHeight: 100, width:250, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}} >
+                    <nav class="blue accent-1">
                         <div className="nav-wrapper">
                             <a href="/" className="brand-logo">J&T Bot</a>
-                            <ul id="nav-mobile" className="right hide-on-med-and-down">
+                            <ul id="nav-mobile" className="right hide-on-med-and-down" >
                                 <li><a href="/" onClick={this.show}>Show</a></li>
                             </ul>
                         </div>

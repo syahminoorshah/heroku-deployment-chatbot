@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+// import { ChakraProvider } from "@chakra-ui/react"
 
 import Header from './Header';
 import Landing from './pages/Landing';
@@ -14,6 +15,7 @@ const App = () =>
             <BrowserRouter>
                 <div>
                     <Header/>
+                    {/* <ChakraProvider/> */}
                     <Route exact path="/" component={Landing} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/shop" component={Shop} />

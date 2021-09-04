@@ -10,6 +10,11 @@ class QuickReplies extends Component {
     _handleClick(event, payload, text) {
         this.props.replyClick(event, payload, text);
     }
+
+    renderQuickReply(reply, i) {
+        return <QuickReply key={i} click={this._handleClick} reply={reply} />;
+    }
+
     renderQuickReply(reply, i) {
         return <QuickReply key={i} click={this._handleClick} reply={reply} />;
     }
@@ -31,7 +36,7 @@ class QuickReplies extends Component {
                 <div className="card-panel grey lighten-5 z-depth-1">
                     <div className="row valign-wrapper">
                         <div className="col s2">
-                            <a href="/" className="btn-floating btn-large waves-effect waves-light grey">{this.props.speaks}</a>
+                            <a href="/" className="btn-floating btn-large waves-effect waves-light blue">{this.props.speaks}</a>
                         </div>
                         <div id="quick-replies" className="col s10">
                             {this.props.text && <p>
