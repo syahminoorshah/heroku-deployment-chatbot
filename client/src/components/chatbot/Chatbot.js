@@ -223,7 +223,7 @@ class Chatbot extends Component {
         if (this.state.showBot) {
             return (
                 
-                <div  style={{ 
+                <div style={{ 
                     // minHeight: 100, 
                     // maxHeight: 500,
                     height: 700, 
@@ -232,30 +232,18 @@ class Chatbot extends Component {
                     bottom: 0, 
                     right: 10, 
                     border: '6px solid black',
-                    borderRadius: '9px'}}>
-                    {/* <div class="chatbot-header-name-col"> */}
-                    {/* <nav style = {{backgroundColor: 'light-grey'}}> */}
-                    {/* style ={{ textAlign: 'left', fontSize: '1px' }} */}
+                    borderRadius: '9px'}} >
                     <div style = {{ backgroundColor: 'whitesmoke', border: '1px solid black', borderRadius: '3px solid black', paddingTop: '5px' }}>
                         <div>
-                            
                                     <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png"></img>
                                     <span style = {{position: 'absolute', bottom: 650, left: 80, display: 'block', fontSize: '18px', color: '#48b2fb', fontWeight: 'bold'}} >Ask CARL</span>
                                     <span style = {{position: 'absolute', bottom: 631, left: 80}} >YOUR VIRTUAL ASSISTANT</span>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
-                            {/* <ul className="right hide-on-med-and-down" > */}
-                                
-                            {/* </ul> */}
-                        </div>
-                               
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 613, left: 365, fontSize: '10px', color: 'orangered'}}>POWERED BY WIPDATA</a>
+                        </div>                            
                     </div>   
                     
-                    {/* </nav> */}
-                    {/* </div> */}
-
-
-
         {/* //Chatbot Inner Layout */}
 
                     <div id="chatbot"  style={{ 
