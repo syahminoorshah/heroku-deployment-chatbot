@@ -223,64 +223,49 @@ class Chatbot extends Component {
         if (this.state.showBot) {
             return (
                 
-                <div class ='red lighten-5' style={{ minHeight: 100, maxHeight: 500, width:380, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}>
-                    <nav class="blue accent-1">
-                        <div className="nav-wrapper" style ={{ textAlign: 'left', fontSize: '1px' }} class="blue accent-1">
-                            <a href="/"  className="brand-logo"> <p6 style = {{fontSize:'20px'}}  >J&T Bot</p6> </a>
-                               
-                            <ul  id="nav-mobile" className="right hide-on-med-and-down">
-                                <li><a href="/" onClick={this.hide}>Close</a></li>
-                            </ul>
+                <div  style={{ 
+                    // minHeight: 100, 
+                    // maxHeight: 500,
+                    height: 700, 
+                    width:500, 
+                    position: 'absolute', 
+                    bottom: 0, 
+                    right: 10, 
+                    border: '6px solid black',
+                    borderRadius: '9px'}}>
+                    {/* <div class="chatbot-header-name-col"> */}
+                    {/* <nav style = {{backgroundColor: 'light-grey'}}> */}
+                    {/* style ={{ textAlign: 'left', fontSize: '1px' }} */}
+                    <div style = {{ backgroundColor: 'whitesmoke', border: '1px solid black', borderRadius: '3px solid black', paddingTop: '5px' }}>
+                        <div>
+                            
+                                    <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png"></img>
+                                    <span style = {{position: 'absolute', bottom: 650, left: 80, display: 'block', fontSize: '18px', color: '#48b2fb', fontWeight: 'bold'}} >Ask CARL</span>
+                                    <span style = {{position: 'absolute', bottom: 631, left: 80}} >YOUR VIRTUAL ASSISTANT</span>
+                                    <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
+                                    <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
+                            {/* <ul className="right hide-on-med-and-down" > */}
+                                
+                            {/* </ul> */}
                         </div>
-                    </nav>
+                               
+                    </div>   
+                    
+                    {/* </nav> */}
+                    {/* </div> */}
 
 
 
         {/* //Chatbot Inner Layout */}
 
-                    <div id="chatbot"  style={{ minHeight: 300, maxHeight: 388, width:'100%', overflow: 'auto'}}>
-                    {/* <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate"></input>
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate"></input>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate"></input>
-          <label for="disabled">Disabled</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate"></input>
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate"></input>
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          This is an inline input field:
-          <div class="input-field inline">
-            <input id="email_inline" type="email" class="validate"></input>
-            <label for="email_inline">Email</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div> */}
+                    <div id="chatbot"  style={{ 
+                        // minHeight: 300, 
+                        // maxHeight: 388, 
+                        height: 570,
+                        width:'100%', 
+                        overflow: 'auto',
+                        backgroundColor: 'white'}}>
+                    
                          {this.renderMessages(this.state.messages)} 
                        
                         <div ref={(el) => { this.messagesEnd = el; }}
@@ -288,20 +273,12 @@ class Chatbot extends Component {
                                  {/* , clear: "both"  */}
                         </div>
                     </div>
-                    
-
-                    {/* <div className = "buttonMultiple">
-                       
-                        <a href = "/" class="waves-effect waves-light btn"><input type="button" value="Track My Number" ></input></a>
-                        <a href ="/" class="waves-effect waves-light btn"><input type="button" value="Quote Delivery"></input></a>
-                        <a href ="/" class="waves-effect waves-light btn"><input type="button" value="J&T Location Near Me"></input></a>
-                    
-                    </div> */}
+                
 
                     {/* Chatbot User Response */}
                     <div className=" col s12" style={{}} class="blue accent-1" class='black-text' >
                         
-                        <input class='black-text' style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
+                        <input class='black-text' style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%', backgroundColor: 'whitesmoke'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
                     </div>
 
                 </div>
@@ -309,15 +286,16 @@ class Chatbot extends Component {
         } else {
             return (
                 // Hide Chatbot
-                <div style={{ minHeight: 20, maxHeight: 100, width:250, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}} >
-                    <nav class="blue accent-1">
-                        <div className="nav-wrapper">
-                            <a href="/" className="brand-logo">J&T Bot</a>
-                            <ul id="nav-mobile" className="right hide-on-med-and-down" >
-                                <li><a href="/" onClick={this.show}>Show</a></li>
-                            </ul>
+                //style={{ minHeight: 20, maxHeight: 100, width:250, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}
+                <div  >
+                    
+                        <div style = {{ position: 'absolute', bottom: 0, right: 15}}>
+                            {/* <a href="/" >J&T Bot</a> */}
+                            {/* <ul  className="right hide-on-med-and-down" > */}
+                                <a href="/" onClick={this.show}> <img src = "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/2x/external-customer-support-female-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" ></img></a>
+                            {/* </ul> */}
                         </div>
-                    </nav>
+                    
                     <div ref={(el) => { this.messagesEnd = el; }}
                          style={{ float:"left", clear: "both" }}>
                     </div>
