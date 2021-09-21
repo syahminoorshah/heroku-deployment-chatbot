@@ -226,21 +226,21 @@ class Chatbot extends Component {
                 <div style={{ 
                     // minHeight: 100, 
                     // maxHeight: 500,
-                    height: 700, 
+                    height: 690, 
                     width:500, 
                     position: 'absolute', 
                     bottom: 0, 
                     right: 10, 
                     border: '6px solid black',
-                    borderRadius: '9px'}} >
-                    <div style = {{ backgroundColor: 'whitesmoke', border: '1px solid black', borderRadius: '3px solid black', paddingTop: '5px' }}>
+                    borderRadius: '15px'}} >
+                    <div style = {{ backgroundColor: 'whitesmoke',  borderRadius: '3px', paddingTop: '5px' }}>
                         <div>
                                     <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png"></img>
-                                    <span style = {{position: 'absolute', bottom: 650, left: 80, display: 'block', fontSize: '18px', color: '#48b2fb', fontWeight: 'bold'}} >Ask CARL</span>
-                                    <span style = {{position: 'absolute', bottom: 631, left: 80}} >YOUR VIRTUAL ASSISTANT</span>
+                                    <span style = {{position: 'absolute', bottom: 640, left: 80, display: 'block', fontSize: '18px', color: '#48b2fb', fontWeight: 'bold'}} >Ask CARL</span>
+                                    <span style = {{position: 'absolute', bottom: 621, left: 80}} >YOUR VIRTUAL ASSISTANT</span>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 613, left: 365, fontSize: '10px', color: 'orangered'}}>POWERED BY WIPDATA</a>
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 603, left: 365, fontSize: '10px', color: 'orangered'}}>POWERED BY WIPDATA</a>
                         </div>                            
                     </div>   
                     
@@ -248,8 +248,8 @@ class Chatbot extends Component {
 
                     <div id="chatbot"  style={{ 
                         // minHeight: 300, 
-                        // maxHeight: 388, 
-                        height: 570,
+                        // maxHeight: 388,
+                        height: 560,
                         width:'100%', 
                         overflow: 'auto',
                         backgroundColor: 'white'}}>
@@ -264,7 +264,8 @@ class Chatbot extends Component {
                 
 
                     {/* Chatbot User Response */}
-                    <div className=" col s12" style={{}} class="blue accent-1" class='black-text' >
+                    {/* className=" col s12" style={{}} class="blue accent-1" class='black-text' */}
+                    <div  >
                         
                         <input class='black-text' style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%', backgroundColor: 'whitesmoke'}} ref={(input) => { this.talkInput = input; }} placeholder="type a message:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
                     </div>
