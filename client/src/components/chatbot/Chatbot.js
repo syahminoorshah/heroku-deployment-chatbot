@@ -233,14 +233,14 @@ class Chatbot extends Component {
                     right: 10, 
                     border: '6px solid black',
                     borderRadius: '15px'}} >
-                    <div style = {{ backgroundColor: 'whitesmoke',  borderRadius: '3px', paddingTop: '5px' }}>
+                    <div style = {{ backgroundColor: 'CadetBlue',  borderRadius: '3px', paddingTop: '5px' }}>
                         <div>
                                     <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png"></img>
-                                    <span style = {{position: 'absolute', bottom: 640, left: 80, display: 'block', fontSize: '18px', color: '#48b2fb', fontWeight: 'bold'}} >Ask CARL</span>
-                                    <span style = {{position: 'absolute', bottom: 621, left: 80}} >YOUR VIRTUAL ASSISTANT</span>
+                                    <span style = {{position: 'absolute', bottom: 640, left: 80, display: 'block', fontSize: '18px', color: 'white', fontWeight: 'bold'}} >J&T Online Assistant</span>
+                                    <span style = {{position: 'absolute', bottom: 621, left: 80}} >Agent</span>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 603, left: 365, fontSize: '10px', color: 'orangered'}}>POWERED BY WIPDATA</a>
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 608, left: 365, fontSize: '10px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
                         </div>                            
                     </div>   
                     
