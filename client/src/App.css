@@ -1,11 +1,11 @@
 
 
 body {
-    background-image: linear-gradient(rgb(214, 114, 114), rgb(238, 69, 69));
+    /* background-image: linear-gradient(rgb(214, 114, 114), rgb(238, 69, 69)); */
     color: rgb(51, 48, 48);
     padding: 20px;
     font-family: Arial;
-    /* background-image: url(https://apicms.thestar.com.my/uploads/images/2019/11/10/376950.jpg); */
+    background-image: url(https://apicms.thestar.com.my/uploads/images/2019/11/10/376950.jpg);
     background-size: 1600px 800px;
     /* text-align: center; */
   }

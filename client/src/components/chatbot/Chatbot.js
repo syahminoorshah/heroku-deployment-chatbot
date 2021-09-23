@@ -227,7 +227,7 @@ class Chatbot extends Component {
                     // minHeight: 100, 
                     // maxHeight: 500,
                     height: 690, 
-                    width:500, 
+                    width:430, 
                     position: 'absolute', 
                     bottom: 0, 
                     right: 10, 
@@ -240,7 +240,7 @@ class Chatbot extends Component {
                                     <span style = {{position: 'absolute', bottom: 621, left: 80}} >Agent</span>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 608, left: 365, fontSize: '10px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 608, left: 345, fontSize: '6px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
                         </div>                            
                     </div>   
                     
