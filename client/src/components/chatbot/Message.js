@@ -13,15 +13,16 @@ import React from 'react';
 const Message = (props) => {
     return (
         
-        <div >
-            <div style = {{backgroundColor: 'white'}}>
+        <div  >
+            <div style = {{backgroundColor: 'Lavender',  fontSize: '18px'}}>
                 <div className="row valign-wrapper">
                     {props.speaks==='J&T' &&
                     <div >
                         <a href="/" className="btn-floating btn-large waves-effect waves-light red">{props.speaks}</a>
                     </div>
+                    
                     }
-                    <div style = {{margin: '3px', paddingTop: '10px'}} >
+                    <div style = {{margin: '5px', paddingTop: '10px'}} >
                       <span className="black-text">
                         {props.text}
                       </span>
@@ -31,6 +32,7 @@ const Message = (props) => {
                         <a href="/" className="btn-floating btn-large waves-effect waves-light blue">{props.speaks}</a>
                     </div>
                     }
+                    
                 </div>
             </div>
         </div>

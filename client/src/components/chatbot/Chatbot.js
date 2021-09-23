@@ -252,7 +252,7 @@ class Chatbot extends Component {
                         height: 560,
                         width:'100%', 
                         overflow: 'auto',
-                        backgroundColor: 'white'}}>
+                        backgroundColor: 'PapayaWhip'}}>
                     
                          {this.renderMessages(this.state.messages)} 
                        

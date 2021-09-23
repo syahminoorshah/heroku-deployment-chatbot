@@ -36,7 +36,7 @@ class QuickReplies extends Component {
         return (
             <div >
                 <div >
-                    <div className="row valign-wrapper">
+                    <div className="row valign-wrapper" style = {{backgroundColor: 'Lavender'}}>
                         <div className="col s2">
                             <a href="/" className="btn-floating btn-large waves-effect waves-light red">{this.props.speaks}</a>
                         </div>
