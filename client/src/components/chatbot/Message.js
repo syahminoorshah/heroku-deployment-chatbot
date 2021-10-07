@@ -12,24 +12,26 @@ import React from 'react';
 //className="col s10"
 const Message = (props) => {
     return (
-        
+        // className="btn-floating btn-large waves-effect waves-light red"
+        //className="btn-floating btn-large waves-effect waves-light blue"
+        ////style = {{margin: '5px', padding: '10px', border: '3px solid black'}}
         <div  >
-            <div style = {{backgroundColor: 'Lavender',  fontSize: '18px'}}>
-                <div className="row valign-wrapper">
+            <div style = {{backgroundColor: 'Lavender',  fontSize: '12px', paddingTop: '6px', fontWeight: 'bold'}}>
+                <div  className="row valign-wrapper">
                     {props.speaks==='J&T' &&
                     <div >
-                        <a href="/" className="btn-floating btn-large waves-effect waves-light red">{props.speaks}</a>
+                        <a href="/" className="btn-floating btn-large waves-effect waves-light red" >{props.speaks}</a>
                     </div>
                     
                     }
-                    <div style = {{margin: '5px', paddingTop: '10px'}} >
+                    <div >
                       <span className="black-text">
                         {props.text}
                       </span>
                     </div >
                     {props.speaks==='user' &&
-                    <div className="col s2">
-                        <a href="/" className="btn-floating btn-large waves-effect waves-light blue">{props.speaks}</a>
+                    <div className="col s2" >
+                        <a href="/" className="btn-floating btn-large waves-effect waves-light red" >{props.speaks}</a>
                     </div>
                     }
                     

@@ -11,6 +11,7 @@ mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: t
 app.use(bodyParser.json());
 
 require('./models/Registration');
+// require('./models/Tracking');
 require('./routes/dialogFlowRoutes')(app);
 require('./routes/fulfillmentRoutes')(app);
 

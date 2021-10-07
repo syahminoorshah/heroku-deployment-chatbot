@@ -12,6 +12,7 @@ import QuickReplies from './QuickReplies';
 import Options from '../Options/Options';
 
 
+
 const cookies = new Cookies();
 
 
@@ -52,9 +53,11 @@ class Chatbot extends Component {
         this.setState({ messages: [...this.state.messages, says]});
         const res = await axios.post('/api/df_text_query',  {text: queryText, userID: cookies.get('userID')});
 
+
+
         for (let msg of res.data.fulfillmentMessages) {
             says = {
-                speaks: 'J&T',
+                speaks: '',
                 msg: msg
             }
             this.setState({ messages: [...this.state.messages, says]});
@@ -68,13 +71,14 @@ class Chatbot extends Component {
 
         for (let msg of res.data.fulfillmentMessages) {
             let says = {
-                speaks: 'J&T',
+                speaks: '',
                 msg: msg
             }
 
             this.setState({ messages: [...this.state.messages, says]});
         }
     };
+
 
     resolveAfterXSeconds(x) {
         return new Promise(resolve => {
@@ -226,21 +230,24 @@ class Chatbot extends Component {
                 <div style={{ 
                     // minHeight: 100, 
                     // maxHeight: 500,
-                    height: 690, 
+                    height: 590, 
                     width:430, 
                     position: 'absolute', 
                     bottom: 0, 
                     right: 10, 
-                    border: '6px solid black',
-                    borderRadius: '15px'}} >
-                    <div style = {{ backgroundColor: 'CadetBlue',  borderRadius: '3px', paddingTop: '5px' }}>
+                    border: '3px solid black',
+                    borderRadius: '15px',
+                    }} >
+                    <div style = {{ backgroundColor: 'CadetBlue',  borderRadius: '9px' }}>
                         <div>
-                                    <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png"></img>
-                                    <span style = {{position: 'absolute', bottom: 640, left: 80, display: 'block', fontSize: '18px', color: 'white', fontWeight: 'bold'}} >J&T Online Assistant</span>
-                                    <span style = {{position: 'absolute', bottom: 621, left: 80}} >Agent</span>
-                                    <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 43}}></img></a>
-                                    <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 608, left: 345, fontSize: '6px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
+                                    {/* <div style = {{width:50,height:50,borderRadius:'50%'}}> */}
+                                        <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png" style={{width:"50px"}}></img>
+                                    {/* </div> */}
+                                    <span style = {{position: 'absolute', bottom: 550, left: 60, display: 'block', fontSize: '18px', color: 'white', fontWeight: 'bold'}} >J&T Online Assistant</span>
+                                    <span style = {{position: 'absolute', bottom: 531, left: 60}} >Agent</span>
+                                    <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 18, width:"20px"}}></img></a>
+                                    <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0, width:"20px"}} ></img></a>
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 529, left: 350, fontSize: '6px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
                         </div>                            
                     </div>   
                     
@@ -249,10 +256,11 @@ class Chatbot extends Component {
                     <div id="chatbot"  style={{ 
                         // minHeight: 300, 
                         // maxHeight: 388,
-                        height: 560,
+                        height: 480,
                         width:'100%', 
                         overflow: 'auto',
-                        backgroundColor: 'PapayaWhip'}}>
+                        backgroundColor: 'PapayaWhip'
+                        }}>
                     
                          {this.renderMessages(this.state.messages)} 
                        
@@ -280,8 +288,8 @@ class Chatbot extends Component {
                     
                         <div style = {{ position: 'absolute', bottom: 0, right: 15}}>
                             {/* <a href="/" >J&T Bot</a> */}
-                            {/* <ul  className="right hide-on-med-and-down" > */}
-                                <a href="/" onClick={this.show}> <img src = "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/2x/external-customer-support-female-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" ></img></a>
+                            {/* <ul  className="right hide-on-med-and-down" > */} 
+                                <a href="/" onClick={this.show}> <img src = "https://img.icons8.com/color/2x/chat.png" style={{width:"50px"}}></img></a>
                             {/* </ul> */}
                         </div>
                     

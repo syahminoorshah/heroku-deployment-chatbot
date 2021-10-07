@@ -19,4 +19,10 @@ module.exports = app => {
         let responses = await chatbot.eventQuery(req.body.event, req.body.userID, req.body.parameters);
         res.send(responses[0].queryResult);
     });
+
+    //api/df_tracking_query async 
+
+    app.get('/api/trackingNumber', async (req, res) => {
+        res.send({'hello': 'Misyah'})
+    })
 } 

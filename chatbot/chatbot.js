@@ -18,6 +18,7 @@ const credentials = {
 const sessionClient = new dialogflow.SessionsClient({projectID: projectID, credentials: credentials});
 const sessionPath = sessionClient.sessionPath(config.googleProjectID, config.dialogFlowSessionID);
 const Registration = mongoose.model('registration');
+// const Tracking = mongoose.model('tracking');
 
 module.exports = {
     //textQuery: async function(text, parameters= {}) {
@@ -66,6 +67,7 @@ module.exports = {
         return responses;
     },
 
+
     handleAction: function(responses){
         let self = module.exports;
         let queryResult = responses[0].queryResult;
@@ -77,6 +79,11 @@ module.exports = {
                     self.saveRegistration(queryResult.parameters.fields);
                 }
                 break;
+            // case 'Option1-Tracking.Option1-Tracking-custom':
+            //     if (queryResult.allRequiredParamsPresent) {
+            //         self.getTracking(queryResult.parameters.fields);
+            //     }
+            //     break;
         }
 
         // console.log(queryResult.action);
@@ -85,6 +92,24 @@ module.exports = {
         // console.log(queryResult.parameters.fields);
         return responses;
     },
+
+    // getTracking: async function(fields){
+    //     const tracking = new Tracking({
+    //         phone: fields.phone.stringValue,
+    //         // name: fields.name.stringValue,
+    //         // address: fields.address.stringValue,
+    //         // phone: fields.phone.stringValue,
+    //         // email: fields.email.stringValue,
+    //         dateSent: Date.now()
+    //     });
+    //     try{
+    //         let trc = await tracking.save();
+    //         console.log(trc);
+    //     } catch (err){
+    //         console.log(err);
+    //     }
+    // },
+
     saveRegistration: async function(fields){
         const registration = new Registration({
             name: fields.name.stringValue,

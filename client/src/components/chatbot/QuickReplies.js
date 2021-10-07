@@ -29,6 +29,7 @@ class QuickReplies extends Component {
             return null;
         }
     }
+    //Lavender
 
     //className="col s12 m8 offset-m2 l6 offset-l3"
     //className="card-panel grey lighten-5 z-depth-1"
@@ -36,9 +37,10 @@ class QuickReplies extends Component {
         return (
             <div >
                 <div >
-                    <div className="row valign-wrapper" style = {{backgroundColor: 'Lavender'}}>
-                        <div className="col s2">
-                            <a href="/" className="btn-floating btn-large waves-effect waves-light red">{this.props.speaks}</a>
+                    <div  style = {{backgroundColor: 'PapayaWhip'}}>
+                    {/* className="col s2" */}
+                        <div >
+                            <a href="/" >{this.props.speaks}</a>
                         </div>
                         <div id="quick-replies" className="col s10">
                             {this.props.text && <p>

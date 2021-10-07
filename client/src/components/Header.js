@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => (
   
-  <nav style ={{ height: 100}}class="card-panel red">
+  <nav style ={{ height: 80}}class="card-panel red">
       <div className="nav-wrapper">
           <Link to={'/'}  className="brand-logo">J&T Express</Link>
           <ul id="nav-mobile"  className="right hide-on-med-and-down" >
