@@ -238,13 +238,17 @@ class Chatbot extends Component {
                     border: '3px solid black',
                     borderRadius: '15px',
                     }} >
-                    <div style = {{ backgroundColor: 'CadetBlue',  borderRadius: '9px' }}>
+                    <div style = {{ backgroundColor: '#ff3333',  borderRadius: '9px' }}>
                         <div>
-                                    {/* <div style = {{width:50,height:50,borderRadius:'50%'}}> */}
-                                        <img src = "https://img.icons8.com/ios-glyphs/2x/customer-support.png" style={{width:"50px"}}></img>
-                                    {/* </div> */}
-                                    <span style = {{position: 'absolute', bottom: 550, left: 60, display: 'block', fontSize: '18px', color: 'white', fontWeight: 'bold'}} >J&T Online Assistant</span>
-                                    <span style = {{position: 'absolute', bottom: 531, left: 60}} >Agent</span>
+                        {/* https://img.icons8.com/ios-glyphs/2x/customer-support.png */}
+                                    <img src = "https://image.winudf.com/v2/image1/Y29tLm1zZC5zdGFuZGFyZC5KVF9pY29uXzE1NjA5NDAyNDNfMDIz/icon.png?w=&fakeurl=1" style={{width:"48px", height: '50px', width: '50px',backgroundColor: 'white',borderRadius: '50%'}}></img>
+                                    <div style = {{height: '10px', width: '10px', backgroundColor: '#00e600', borderRadius: '50%',bottom: 535, left: 40, position: 'absolute'}}>
+
+                                    </div>
+                                    
+                                    <span style = {{position: 'absolute', bottom: 550, left: 60, display: 'block', fontSize: '18px', color: 'white', fontWeight: 'bold', fontFamily: 'Tillana', letterSpacing: '1.5px'}} >J&T Online Assistant</span>
+                                    <span style = {{position: 'absolute', bottom: 531, left: 60, fontFamily: 'Arvo', color:'white', letterSpacing: '1px'}} >Customer Support</span>
+                                    <a href="/" ><img src = "https://img.icons8.com/ios-glyphs/2x/help.png" style = {{position: 'absolute', right: 38, width:"20px"}}></img></a>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 18, width:"20px"}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0, width:"20px"}} ></img></a>
                                     <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 529, left: 350, fontSize: '6px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
@@ -259,7 +263,7 @@ class Chatbot extends Component {
                         height: 480,
                         width:'100%', 
                         overflow: 'auto',
-                        backgroundColor: 'PapayaWhip'
+                        backgroundColor: 'white'
                         }}>
                     
                          {this.renderMessages(this.state.messages)} 

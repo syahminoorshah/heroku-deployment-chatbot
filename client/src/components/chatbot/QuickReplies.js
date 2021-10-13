@@ -37,7 +37,7 @@ class QuickReplies extends Component {
         return (
             <div >
                 <div >
-                    <div  style = {{backgroundColor: 'PapayaWhip'}}>
+                    <div  style = {{backgroundColor: 'white'}}>
                     {/* className="col s2" */}
                         <div >
                             <a href="/" >{this.props.speaks}</a>
