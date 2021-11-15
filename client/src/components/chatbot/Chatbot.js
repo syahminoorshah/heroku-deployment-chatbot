@@ -251,7 +251,7 @@ class Chatbot extends Component {
                                     <a href="/" ><img src = "https://img.icons8.com/ios-glyphs/2x/help.png" style = {{position: 'absolute', right: 38, width:"20px"}}></img></a>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 18, width:"20px"}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0, width:"20px"}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 529, left: 350, fontSize: '6px', color: 'whitesmoke',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
+                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 529, left: 350, fontSize: '6px', color: 'black',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
                         </div>                            
                     </div>   
                     

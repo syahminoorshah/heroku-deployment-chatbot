@@ -15,6 +15,7 @@ const Message = (props) => {
         // className="btn-floating btn-large waves-effect waves-light red"
         //className="btn-floating btn-large waves-effect waves-light blue"
         ////style = {{margin: '5px', padding: '10px', border: '3px solid black'}}
+        //
         <div style = {{border: '1px solid',backgroundColor: '#f1f1f1', borderRadius: '6px', padding: '1px', margin: '5px 0'}} >
             <div style = {{backgroundColor: '#f1f1f1',  fontSize: '12px', paddingTop: '6px',  paddingLeft: '10px'}}>
                 <div  className="row valign-wrapper">
