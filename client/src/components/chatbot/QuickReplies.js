@@ -39,10 +39,11 @@ class QuickReplies extends Component {
                 <div >
                     <div  style = {{backgroundColor: 'white'}}>
                     {/* className="col s2" */}
+                    {/* className="col s10" */}
                         <div >
                             <a href="/" >{this.props.speaks}</a>
                         </div>
-                        <div id="quick-replies" className="col s10">
+                        <div id="quick-replies" style = {{fontSize: '9px', paddingTop: '6px'}}>
                             {this.props.text && <p>
                                 {this.props.text.stringValue}
                             </p>

@@ -5,7 +5,8 @@ body {
     color: rgb(51, 48, 48);
     padding: 20px;
     font-family: Arial;
-    background-image: url(https://apicms.thestar.com.my/uploads/images/2019/11/10/376950.jpg);
+    /* background-image: url(https://apicms.thestar.com.my/uploads/images/2019/11/10/376950.jpg); */
+    background-color: #333333;
     /* background-size: 1600px 800px; */
     /* text-align: center; */
   }

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Header = () => (
   
-  <nav style ={{ height: 80}}class="card-panel red">
+  <nav style ={{ height: 80}}class="card-panel cyan">
       <div className="nav-wrapper">
-          <Link to={'/'}  className="brand-logo">J&T Express</Link>
+          <Link to={'/'}  className="brand-logo"></Link>
           <ul id="nav-mobile"  className="right hide-on-med-and-down" >
-              <li ><Link to={'/shop'}>Shipping</Link></li>
-              <li ><Link to={'/about'}>Services</Link></li>
+              <li ><Link to={'/shop'}>Test1</Link></li>
+              <li ><Link to={'/about'}>Test2</Link></li>
           </ul>
       </div>
   </nav>
