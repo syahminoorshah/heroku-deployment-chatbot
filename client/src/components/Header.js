@@ -9,7 +9,7 @@ const Header = () => (
           <Link to={'/'}  className="brand-logo"></Link>
           <ul id="nav-mobile"  className="right hide-on-med-and-down" >
               <li ><Link to={'/shop'}>Test1</Link></li>
-              <li ><Link to={'/about'}>Test2</Link></li>
+              <li ><Link to={'/about'}>Test1.0</Link></li>
           </ul>
       </div>
   </nav>
