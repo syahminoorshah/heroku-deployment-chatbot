@@ -41,7 +41,7 @@ class QuickReplies extends Component {
                     {/* className="col s2" */}
                     {/* className="col s10" */}
                         <div >
-                            <a href="/" >{this.props.speaks}</a>
+                            <a href="/"  className="btn-floating btn-small waves-effect waves-light blue">{this.props.speaks}</a>
                         </div>
                         <div id="quick-replies" style = {{fontSize: '9px', paddingTop: '6px'}}>
                             {this.props.text && <p>

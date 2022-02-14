@@ -57,7 +57,7 @@ class Chatbot extends Component {
 
         for (let msg of res.data.fulfillmentMessages) {
             says = {
-                speaks: '',
+                speaks: 'bot',
                 msg: msg
             }
             this.setState({ messages: [...this.state.messages, says]});
@@ -71,7 +71,7 @@ class Chatbot extends Component {
 
         for (let msg of res.data.fulfillmentMessages) {
             let says = {
-                speaks: '',
+                speaks: 'bot',
                 msg: msg
             }
 
@@ -230,29 +230,30 @@ class Chatbot extends Component {
                 <div style={{ 
                     // minHeight: 100, 
                     // maxHeight: 500,
-                    height: 450, 
-                    width:300, 
+                    height: 480, 
+                    width:360, 
                     position: 'absolute', 
                     bottom: 0, 
                     right: 10, 
                     border: '3px solid black',
                     borderRadius: '15px',
                     }} >
-                    <div style = {{ backgroundColor: 'lightblue',  borderRadius: '9px' , width: '100%'}}>
+                    <div style = {{ backgroundColor: 'lightblue',  borderRadius: '3px' , width: '100%'}}>
                         <div>
                         {/* https://img.icons8.com/ios-glyphs/2x/customer-support.png */}
                                     {/* <img src = "https://image.winudf.com/v2/image1/Y29tLm1zZC5zdGFuZGFyZC5KVF9pY29uXzE1NjA5NDAyNDNfMDIz/icon.png?w=&fakeurl=1" style={{width:"48px", height: '50px', width: '50px',backgroundColor: 'white',borderRadius: '50%'}}></img> */}
-                                    <img src = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.abexmedical.com.my%2Fwp-content%2Fuploads%2F2020%2F06%2Fround_abex_bc7d93e66ce73c45b24f8809364938d2.png&imgrefurl=https%3A%2F%2Fwww.abexmedical.com.my%2F&tbnid=UC8Kmwqqqvj75M&vet=12ahUKEwjSk9KrwOD1AhWyRGwGHdquAHoQMygAegQIARBG..i&docid=v5rJXTamXVIcMM&w=824&h=708&q=abex%20medical%20logo&ved=2ahUKEwjSk9KrwOD1AhWyRGwGHdquAHoQMygAegQIARBG" style={{width:"48px", height: '50px', width: '50px',backgroundColor: 'white',borderRadius: '50%'}}></img>
-                                    <div style = {{height: '10px', width: '10px', backgroundColor: '#00e600', borderRadius: '50%',bottom: 400, left: 40, position: 'absolute'}}>
+                                    <img src = "https://img.icons8.com/external-flatart-icons-flat-flatarticons/2x/external-customer-design-thinking-and-3d-model-printing-flatart-icons-flat-flatarticons.png" style={{width:"48px", height: '50px', width: '50px',backgroundColor: 'white',borderRadius: '50%'}}></img>
+                                    <div style = {{height: '10px', width: '10px', backgroundColor: '#00e600', borderRadius: '50%',bottom: 430, left: 40, position: 'absolute'}}>
 
                                     </div>
                                     
-                                    <span style = {{position: 'absolute', bottom: 420, left: 60, display: 'block', fontSize: '12px', color: 'black', fontWeight: 'bold', fontFamily: 'Tillana', letterSpacing: '1.5px'}} >Abex Online Assistant</span>
-                                    <span style = {{position: 'absolute', bottom: 401, left: 60, fontFamily: 'Arvo', color:'white', fontSize: '12px', color: 'black', fontWeight: 'bold', fontFamily: 'Tillana', letterSpacing: '1px'}} >Customer Support</span>
+                                    <span style = {{position: 'absolute', bottom: 450, left: 60, display: 'block', fontSize: '12px', color: 'black', fontWeight: 'bold', fontFamily: 'Tillana', letterSpacing: '1.5px'}} >Abex Online Assistant</span>
+                                    <span style = {{position: 'absolute', bottom: 431, left: 60, fontFamily: 'Arvo', color:'white', fontSize: '12px', color: 'black', fontWeight: 'bold', fontFamily: 'Tillana', letterSpacing: '1px'}} >Customer Support</span>
                                     <a href="/" ><img src = "https://img.icons8.com/ios-glyphs/2x/help.png" style = {{position: 'absolute', right: 38, width:"20px"}}></img></a>
                                     <a href="/" ><img src = "https://img.icons8.com/material-two-tone/2x/loading.png" style = {{position: 'absolute', right: 18, width:"20px"}}></img></a>
                                     <a href="/"  onClick={this.hide}><img src = "https://img.icons8.com/material-outlined/2x/multiply.png" style = {{position: 'absolute', right: 0, width:"20px"}} ></img></a>
-                                    <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 389, left: 222, fontSize: '6px', color: 'black',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a>
+                                    
+                                    {/* <a href="https://www.wipdata.com/" style = {{position: 'absolute', bottom: 389, left: 222, fontSize: '6px', color: 'black',  fontWeight: 'bold'}}>POWERED BY WIPDATA</a> */}
                         </div>                            
                     </div>   
                     
@@ -261,7 +262,7 @@ class Chatbot extends Component {
                     <div id="chatbot"  style={{ 
                         // minHeight: 300, 
                         // maxHeight: 388,
-                        height: 345,
+                        height: 371,
                         width:'100%', 
                         overflow: 'auto',
                         backgroundColor: 'white',

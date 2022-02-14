@@ -1,0 +1,14 @@
+bot--messages--box {
+    border: 1px solid;
+    background-color: #f1f1f1;
+    border-radius: 6px; 
+    padding: 1px;
+    margin: 5px 0;
+}
+
+bot-messages1-box2 {
+    background-color: #f1f1f1;
+    font-size: 12px; 
+    padding-top: 6px;
+    padding-left: 10px;
+}
